@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Watson Chat Bot</title>
+</head>
+
+<body>
+    <h1>Watson Chat bot is here to help you!</h1>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "b10b9a26-4f2c-4573-a20c-a7f5dae3b2b2", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "1a1432a6-7d86-4dff-a1d2-4f5b6503e740", // The ID of your service instance.
+            onLoad: function (instance) { instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+
+    </script>
+</body>
+
+</html>
+
+<!-- Where is your hospital located? -->
