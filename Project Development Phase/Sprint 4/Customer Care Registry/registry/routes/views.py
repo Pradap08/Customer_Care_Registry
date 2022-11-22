@@ -7,7 +7,6 @@ import uuid
 from datetime import date
 import random
 from registry.model import Customer, Agent, Admin, Mail
-from ..secret import connection_string
 
 views = Blueprint("blue_print", __name__)
 email_regex = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
@@ -18,7 +17,7 @@ agent = Agent()
 admin = Admin()
 mail = Mail()
 
-conn = connection_string
+conn = ibm_db.connect('DATABASE=bludb;HOSTNAME=;PORT=;SECURITY=;SSLServerCertificate=;UID=;PWD=', '', '')
 
 @views.route('/logout')
 @login_required
