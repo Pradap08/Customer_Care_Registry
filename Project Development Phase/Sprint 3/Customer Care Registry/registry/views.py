@@ -88,6 +88,7 @@ def login():
 
                         # checking if the customer entered a valid password now
                         # encrypting the entered password
+                        
                         passcode = str(hashlib.sha256(password.encode()).hexdigest())
 
                         # now checking if the encrypted string is same as that of the one in database
