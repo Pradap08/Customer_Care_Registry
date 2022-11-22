@@ -15,7 +15,7 @@ customer = Customer()
 agent = Agent()
 admin = Admin()
 
-conn = ibm_db.connect('DATABASE=bludb;HOSTNAME=2f3279a5-73d1-4859-88f0-a6c3e6b4b907.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud;PORT=30756;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=tdn81266;PWD=7LY8okjAouJf3LoO', '', '')
+conn = ibm_db.connect('DATABASE=bludb;HOSTNAME=;PORT=;SECURITY=;SSLServerCertificate=;UID=;PWD=', '', '')
 
 @views.route('/logout')
 @login_required
@@ -49,7 +49,7 @@ def login():
 
         # Admin login
         if email == "admin.ccr@gmail.com":
-            if password == "admin.ccr@2022":
+            if password == "admin@ccr":
                 # initialising admin object
                 admin.set(email, password)
 
